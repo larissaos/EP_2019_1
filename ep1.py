@@ -7,33 +7,33 @@
 
 def carregar_cenarios():
     cenarios = {
-        "inicio": {
+        "inicio": { #cenário 1
             "titulo": "Saguao do perigo",
             "descricao": "Voce esta no saguao de entrada do insper",
-            "opcoes": {
-                "andar professor": "Tomar o elevador para o andar do professor",
-                "biblioteca": "Ir para a biblioteca"
+            "opcoes": { #escolha para onde ir:
+                "andar professor": "Tomar o elevador para o andar do professor", #1
+                "biblioteca": "Ir para a biblioteca"#2
             }
         },
-        "andar professor": {
+        "andar professor": {#caso escolha 1
             "titulo": "Andar do desespero",
             "descricao": "Voce chegou ao andar da sala do seu professor",
-            "opcoes": {
+            "opcoes": { #pode escolher voltar para o inicio ou seguir na escoolha 1
                 "inicio": "Tomar o elevador para o saguao de entrada",
                 "professor": "Falar com o professor"
             }
         },
-        "professor": {
+        "professor": {#caso permaneça na escolha 1
             "titulo": "O monstro do Python",
             "descricao": "Voce foi pedir para o professor adiar o EP. "
                          "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",
-            "opcoes": {}
+                         "e devorou sua alma.",#aqui voce morreu na escolha 1
+            "opcoes": {}#depois de morrer, ressurgi na biblioteca (podemos mudar isso)
         },
-        "biblioteca": {
+        "biblioteca": {#somente uma escolha, voltar para o inicio e então precisamos criar outros cenários aqui
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
-            "opcoes": {
+            "opcoes": {#aqui vc volta para o inicio
                 "inicio": "Voltar para o saguao de entrada"
             }
         }
