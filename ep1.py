@@ -59,9 +59,8 @@ def main():
     game_over = False
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
-
-        # Aluno A: substitua este comentário pelo código para imprimir 
-        # o cenário atual.
+        
+        print ("você está em:{0}\n cenário com {1} caractéres".format(nome_cenario_atual, len(cenario_atual))
 
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
