@@ -64,6 +64,11 @@ def main():
         
         print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
         
+
+        caracteres = "-"*len(nome_cenario_atual)
+        
+        print ("você está em:\n{0}\n{1}\n {2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
+        
         opcoes = cenario_atual['opcoes']
         
        
