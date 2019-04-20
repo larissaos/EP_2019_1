@@ -34,10 +34,20 @@ def carregar_cenarios():
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {#aqui vc volta para o inicio
-                "inicio": "Voltar para o saguao de entrada"
+                "andar do professor": "Voltar para onde o monstro está",
+                "subsolo": "Fugir para um lugar mais seguro"
             }
-        }
-    }
+        },
+        "subsolo": {
+            "titulo": "Os fantasmas do laboratório",
+            "descricao":"Você chegou ao subsolo."
+                        "'qUEm EsTá Aí?'"
+                        "Você avista três alunos fantasmas no laboratório!",
+            "opcoes":{ 
+                "lutar":
+                "fugir"}         
+            }
+        },
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
@@ -72,7 +82,6 @@ def main():
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
         else:
-
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
             escolha = input("Escolha para onde você quer ir:")
