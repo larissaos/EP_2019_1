@@ -60,9 +60,13 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         
-        print ("você está em:{0}\n cenário com {1} caractéres".format(nome_cenario_atual, len(cenario_atual))
+        caracteres = "-"*len(cenario_atual)
+        
+        print ("você está em:\n{0}\n {1}".format(nome_cenario_atual, caracteres))
         
         opcoes = cenario_atual['opcoes']
+        
+       
         
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
