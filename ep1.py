@@ -60,8 +60,14 @@ def main():
     while not game_over:# se ele altera a escolha
         cenario_atual = cenarios[nome_cenario_atual] #ele vai ate a escolha
         
-    
+        caracteres = "-"*len(nome_cenario_atual)
+        
+        print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
+        
         opcoes = cenario_atual['opcoes']
+        
+       
+        
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
@@ -69,7 +75,7 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
+            escolha = input("Escolha para onde você quer ir:")
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
