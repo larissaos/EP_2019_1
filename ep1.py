@@ -1,4 +1,4 @@
-# EP 2019-1: Escape Insper
+﻿# EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
@@ -43,22 +43,22 @@ def carregar_cenarios():
 
 
 def main():
-    print("Na hora do sufoco!")
+    print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
-    print()
+    print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     print()
 
-    cenarios, nome_cenario_atual = carregar_cenarios()
+    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
 
-    game_over = False
-    while not game_over:
-        cenario_atual = cenarios[nome_cenario_atual]
+    game_over = False #você morre
+    while not game_over:# se ele altera a escolha
+        cenario_atual = cenarios[nome_cenario_atual] #ele vai ate a escolha
         
         caracteres = "-"*len(nome_cenario_atual)
         
@@ -75,7 +75,7 @@ def main():
 
             # Aluno B: substitua este comentário e a linha abaixo pelo código
             # para pedir a escolha do usuário.
-            escolha = ""
+            escolha = input("Escolha para onde você quer ir:")
 
             if escolha in opcoes:
                 nome_cenario_atual = escolha
