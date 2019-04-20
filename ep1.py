@@ -60,9 +60,9 @@ def main():
     while not game_over:
         cenario_atual = cenarios[nome_cenario_atual]
         
-        caracteres = "-"*len(cenario_atual)
+        caracteres = "-"*len(nome_cenario_atual)
         
-        print ("você está em:\n{0}\n {1}".format(nome_cenario_atual, caracteres))
+        print ("você está em:\n{0}\n{1}\n {2}".format(nome_cenario_atual, caracteres, cenarios))
         
         opcoes = cenario_atual['opcoes']
         
