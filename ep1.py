@@ -43,25 +43,24 @@ def carregar_cenarios():
 
 
 def main():
-    print("Na hora do sufoco!")
+    print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
-    print()
+    print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     print()
 
-    cenarios, nome_cenario_atual = carregar_cenarios()
+    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
 
-    game_over = False
-    while not game_over:
-        cenario_atual = cenarios[nome_cenario_atual]
+    game_over = False #você morre
+    while not game_over:# se ele altera a escolha
+        cenario_atual = cenarios[nome_cenario_atual] #ele vai ate a escolha
         
-        print ("você está em:{0}\n cenário com {1} caractéres".format(nome_cenario_atual, len(cenario_atual))
-
+    
         opcoes = cenario_atual['opcoes']
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
