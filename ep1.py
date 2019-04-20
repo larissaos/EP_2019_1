@@ -1,4 +1,4 @@
-# EP 2019-1: Escape Insper
+﻿# EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
@@ -64,7 +64,6 @@ def main():
         
         print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
         
-
         caracteres = "-"*len(nome_cenario_atual)
         
         print ("você está em:\n{0}\n{1}\n {2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
