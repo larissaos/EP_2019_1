@@ -13,6 +13,20 @@
       }
     }
   },
+   "inicio_2":{
+    "título":"Saguão do perigo",
+    "descrição":"Voce está no saguão de entrada do Insper",
+    "opções":{
+      "andar_professor":{
+          "texto":"Tomar o elevador para o andar do professor",
+          "cenario":"andar_professor_2"
+      },
+      "biblioteca":{
+            "texto":"Ir para a biblioteca",
+            "cenario":"biblioteca"
+        }
+      }
+    },
   "andar_professor": {
     "título": "Andar do desespero",
     "descrição": "Você chegou ao andar da sala do seu professor",
@@ -74,5 +88,19 @@
        "fugir": {
            "texto":"Desistir de tudo"}
    }
-     }
-     }
+     },
+    "quimica":{
+      "título":"Laboratório de química",
+      "descrição":"Você esta no laboratório\nVocê achou uma poção!",
+      "opções":{
+        "voltar":{
+            "texto":"Voltar ao saguão de entrada",
+            "cenario":"inicio_2"
+    },
+       "esconder":{
+            "texto":"Se esconder no armário",
+            "cenario":"armario"
+            }
+        }
+    }
+}

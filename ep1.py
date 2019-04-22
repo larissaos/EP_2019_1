@@ -1,5 +1,4 @@
-﻿a
-# EP 2019-1: Escape Insper
+﻿# EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
