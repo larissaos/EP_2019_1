@@ -42,13 +42,20 @@ def main():
         print(descricao)
         print()
         
-        opcoes = cenario_atual['opcoes']
+        
 
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
             print("Você morreu!")
         else:
+            for opcao in cenario_atual["opções"]:
+                texto = cenario_atual["opções"][opcao]["texto"]
+                space = " "*(24-len(opcao))
+                print(opcao+":", end=space)
+                print(texto)
+                
+            print()
             escolha = input("Escolha para onde você quer ir:")
             if escolha in opcoes:
                 nome_cenario_atual = escolha
