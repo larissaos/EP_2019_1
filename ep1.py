@@ -1,4 +1,5 @@
-﻿# EP 2019-1: Escape Insper
+﻿a
+# EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
@@ -6,7 +7,6 @@
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 from os import system, name
 import json
-
 
 def carregar_cenarios():
 
