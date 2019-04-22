@@ -53,17 +53,6 @@ def carregar_cenarios():
 
 
 def main():
-    print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
-    print("------------------")
-    print()
-    print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
-        "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
-    print()#aqui vc resolve implorar por misericódia
-    print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
-        "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...)")
-    print()
-
     cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
 
     game_over = False #se você n morreu
@@ -76,21 +65,11 @@ def main():
         
         opcoes = cenario_atual['opcoes']
         
-        if opcoes == andar professor:
-            escolha_andar_prof = input("Escolha o que você vai fazer: inicio ou professor"):
-                if escolha_andar_prof == "Tomar elevador para saguao"
-                
-                
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
             print("Você morreu!")
         else:
-<<<<<<< HEAD
-=======
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
->>>>>>> fe701d273302c701999f04013759ae853c63380a
             escolha = input("Escolha para onde você quer ir:")
             if escolha in opcoes:
                 nome_cenario_atual = escolha
@@ -98,6 +77,22 @@ def main():
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
                 print("Você morreu!")
+                
+                
+def primeiro_texto():
+    print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
+    print("------------------")
+    print()
+    print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
+        "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    print()#aqui vc resolve implorar por misericódia
+    print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
+        "na entrada do Insper, e quer procurar o professor para pedir um "
+        "adiamento do EP (boa sorte...)")
+    print()
+    print("Pressione Enter para continuar...")
+    input()
+    
 
     
 
