@@ -4,6 +4,7 @@
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
+from os import system, name
 
 def carregar_cenarios():
     cenarios = {
@@ -34,15 +35,60 @@ def carregar_cenarios():
             "titulo": "Caverna da tranquilidade",
             "descricao": "Voce esta na biblioteca",
             "opcoes": {#aqui vc volta para o inicio
-                "inicio": "Voltar para o saguao de entrada"
+                "andar do professor": "Voltar para onde o monstro está",
+                "subsolo": "Fugir para um lugar mais seguro"
             }
-        }
-    }
+        },
+        "subsolo": {
+            "titulo": "Os fantasmas do laboratório",
+            "descricao":"Você chegou ao subsolo."
+                        "'qUEm EsTá Aí?'"
+                        "Você avista três alunos fantasmas no laboratório!",
+            "opcoes":{ 
+                "lutar":
+                "fugir"}         
+            }
+        },
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
+def clear(): 
+    #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+    if name == 'nt': 
+        _ = system('cls') 
+    else: 
+        _ = system('clear') 
+
 
 def main():
+    clear()
+    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
+
+    game_over = False #se você n morreu
+    while not game_over:# vc ta em algm lugar
+        cenario_atual = cenarios[nome_cenario_atual] 
+        
+        caracteres = "-"*len(nome_cenario_atual)
+        
+        print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
+        
+        opcoes = cenario_atual['opcoes']
+
+        if len(opcoes) == 0:
+            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
+            game_over = True
+            print("Você morreu!")
+        else:
+            escolha = input("Escolha para onde você quer ir:")
+            if escolha in opcoes:
+                nome_cenario_atual = escolha
+            else:
+                print("Sua indecisão foi sua ruína!")
+                game_over = True
+                print("Você morreu!")
+                
+                
+def primeiro_texto():
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
@@ -53,37 +99,11 @@ def main():
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     print()
+    print("Pressione Enter para continuar...")
+    input()
+    
 
-    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
-
-    game_over = False #você morre
-    while not game_over:# se ele altera a escolha
-        cenario_atual = cenarios[nome_cenario_atual] #ele vai ate a escolha
-        
-        caracteres = "-"*len(nome_cenario_atual)
-        
-        print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
-        
-        opcoes = cenario_atual['opcoes']
-
-       
-        
-        if len(opcoes) == 0:
-            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
-            game_over = True
-        else:
-
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
-            escolha = input("Escolha para onde você quer ir:")
-
-            if escolha in opcoes:
-                nome_cenario_atual = escolha
-            else:
-                print("Sua indecisão foi sua ruína!")
-                game_over = True
-
-    print("Você morreu!")
+    
 
 
 # Programa principal.
