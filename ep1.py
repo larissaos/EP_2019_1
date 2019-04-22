@@ -5,52 +5,12 @@
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 from os import system, name
+import json
+
 
 def carregar_cenarios():
-    cenarios = {
-        "inicio": { #cenário 1
-            "titulo": "Saguao do perigo",
-            "descricao": "Voce esta no saguao de entrada do insper, e o clima parece meio estranho.Mesmo assim, prefere continuar.",
-            "opcoes": { #escolha para onde ir:
-                "andar professor": "Tomar o elevador para o andar do professor", #1
-                "biblioteca": "Ir para a biblioteca"#2
-            }
-        },
-        "andar professor": {#caso escolha 1
-            "titulo": "Andar do desespero",
-            "descricao": "Voce chegou ao andar da sala do seu professor",
-            "opcoes": { #pode escolher voltar para o inicio ou seguir na escoolha 1
-                "inicio": "Tomar o elevador para o saguao de entrada",
-                "professor": "Falar com o professor"
-            }
-        },
-        "professor": {#caso permaneça na escolha 1
-            "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",#aqui voce morreu na escolha 1
-            "opcoes": {}#depois de morrer, ressurgi na biblioteca (podemos mudar isso)
-        },
-        "biblioteca": {#somente uma escolha, voltar para o inicio e então precisamos criar outros cenários aqui
-            "titulo": "Caverna da tranquilidade",
-            "descricao": "Voce esta na biblioteca",
-            "opcoes": {#aqui vc volta para o inicio
-                "andar do professor": "Voltar para onde o monstro está",
-                "subsolo": "Fugir para um lugar mais seguro"
-            }
-        },
-        "subsolo": {
-            "titulo": "Os fantasmas do laboratório",
-            "descricao":"Você chegou ao subsolo."
-                        "Avatar: 100 hit points, 12 pontos de ataque e 7 pontos de defesa",
-                        "Fantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa",
-                        "'qUEm EsTá Aí?'",
-                        "Você avista três alunos fantasmas no laboratório!",
-            "opcoes":{ 
-                "lutar": 
-                "fugir":         
-            }
-        },
+    with open('cenarios.json', encoding='utf8') as script:
+        cenarios = json.load(script)
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
@@ -65,6 +25,8 @@ def clear():
 def main():
     clear()
     cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
+    primeiro_texto()
+    clear()
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
@@ -72,9 +34,15 @@ def main():
         
         caracteres = "-"*len(nome_cenario_atual)
         
-        print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
+        opcoes = cenario_atual['opções']
+        descricao = cenario_atual['descrição']
         
-        opcoes = cenario_atual['opcoes']
+        print (cenario_atual["título"])
+        print (caracteres)
+        print(descricao)
+        print()
+        
+        
 
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
