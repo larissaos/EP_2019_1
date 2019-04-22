@@ -42,7 +42,7 @@ def main():
         print(descricao)
         print()
         
-        
+        opcoes = cenario_atual['opcoes']
 
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
