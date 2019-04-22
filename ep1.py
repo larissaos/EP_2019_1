@@ -10,7 +10,7 @@ def carregar_cenarios():
     cenarios = {
         "inicio": { #cenário 1
             "titulo": "Saguao do perigo",
-            "descricao": "Voce esta no saguao de entrada do insper",
+            "descricao": "Voce esta no saguao de entrada do insper, e o clima parece meio estranho.Mesmo assim, prefere continuar.",
             "opcoes": { #escolha para onde ir:
                 "andar professor": "Tomar o elevador para o andar do professor", #1
                 "biblioteca": "Ir para a biblioteca"#2
@@ -42,9 +42,9 @@ def carregar_cenarios():
         "subsolo": {
             "titulo": "Os fantasmas do laboratório",
             "descricao":"Você chegou ao subsolo."
-                        "Avatar: 100 hit points, 12 pontos de ataque e 7 pontos de defesa"
-                        "Fantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa"
-                        "'qUEm EsTá Aí?'"
+                        "Avatar: 100 hit points, 12 pontos de ataque e 7 pontos de defesa",
+                        "Fantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa",
+                        "'qUEm EsTá Aí?'",
                         "Você avista três alunos fantasmas no laboratório!",
             "opcoes":{ 
                 "lutar": 
