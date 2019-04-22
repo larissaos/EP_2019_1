@@ -1,4 +1,4 @@
-﻿# EP 2019-1: Escape Insper
+﻿# EP 19-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
@@ -41,18 +41,18 @@ def carregar_cenarios():
         },
         "subsolo": {
             "titulo": "Os fantasmas do laboratório",
-            "descricao":"Você chegou ao subsolo."
-                        "Avatar: 100 hit points, 12 pontos de ataque e 7 pontos de defesa",
-                        "Fantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa",
-                        "'qUEm EsTá Aí?'",
-                        "Você avista três alunos fantasmas no laboratório!",
+            "descricao":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
+            "fala":"fala_da_persongem",
             "opcoes":{ 
-                "lutar": 
-                "fugir":         
+                "lutar": "Tentar libertar os fantasmas",
+                "fugir": "Desistir de tudo"
             }
+           }
         },
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
+cenarios, nome_cenario_atual = carregar_cenarios(name)
+
 
 def clear(): 
     #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
@@ -60,15 +60,17 @@ def clear():
         _ = system('cls') 
     else: 
         _ = system('clear') 
-
+ 
 
 def main():
     clear()
-    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
+    name = primeiro_texto()
+    cenarios, nome_cenario_atual = carregar_cenarios(name)#aqui deve aparecer as opções, e conforme as escolhas
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
         cenario_atual = cenarios[nome_cenario_atual] 
+        
         
         caracteres = "-"*len(nome_cenario_atual)
         
@@ -91,11 +93,14 @@ def main():
                 
                 
 def primeiro_texto():
+    print("Como quer ser chamado?")
+    name = input()
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
+    print()
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
@@ -103,10 +108,10 @@ def primeiro_texto():
     print()
     print("Pressione Enter para continuar...")
     input()
-    
+    return name
 
     
-
+fala_da_personagem = "{0}:100 hit points, 12 pontos de ataque e 7 pontos de defesa\nFantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa".format(name)
 
 # Programa principal.
 if __name__ == "__main__":
