@@ -9,7 +9,6 @@ import json
 
 
 def carregar_cenarios():
-<<<<<<< HEAD
     cenarios = {
         "inicio": { #cenário 1
             "titulo": "Saguao do perigo",
@@ -45,20 +44,18 @@ def carregar_cenarios():
         "subsolo": {
             "titulo": "Os fantasmas do laboratório",
             "descricao":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
-            "fala":"fala_da_persongem",
             "opcoes":{ 
                 "lutar": "Tentar libertar os fantasmas",
                 "fugir": "Desistir de tudo"
             }
            }
         },
-=======
     with open('cenarios.json', encoding='utf8') as script:
         cenarios = json.load(script)
 >>>>>>> 7876d0ffabde86dc50b17809c86b0c5b7280b050
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
-cenarios, nome_cenario_atual = carregar_cenarios(name)
+cenarios, nome_cenario_atual = carregar_cenarios()
 
 
 def clear(): 
@@ -123,14 +120,11 @@ def primeiro_texto():
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...)")
+        "adiamento do EP (boa sorte {0}...)".formmat(name))
     print()
     print("Pressione Enter para continuar...")
     input()
-    return name
 
-    
-fala_da_personagem = "{0}:100 hit points, 12 pontos de ataque e 7 pontos de defesa\nFantasma: 50 hit points, 5 pontos de ataque e 6 pontos de defesa".format(name)
 
 # Programa principal.
 if __name__ == "__main__":
