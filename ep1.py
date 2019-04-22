@@ -56,9 +56,9 @@ def main():
 
     cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
 
-    game_over = False #você morre
-    while not game_over:# se ele altera a escolha
-        cenario_atual = cenarios[nome_cenario_atual] #ele vai ate a escolha
+    game_over = False #se você n morreu
+    while not game_over:# vc ta em algm lugar
+        cenario_atual = cenarios[nome_cenario_atual] 
         
         caracteres = "-"*len(nome_cenario_atual)
         
@@ -66,24 +66,25 @@ def main():
         
         opcoes = cenario_atual['opcoes']
         
-       
-        
+        if opcoes == andar professor:
+            escolha_andar_prof = input("Escolha o que você vai fazer: inicio ou professor"):
+                if escolha_andar_prof == "Tomar elevador para saguao"
+                
+                
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
+            print("Você morreu!")
         else:
-
-            # Aluno B: substitua este comentário e a linha abaixo pelo código
-            # para pedir a escolha do usuário.
             escolha = input("Escolha para onde você quer ir:")
-
             if escolha in opcoes:
                 nome_cenario_atual = escolha
             else:
                 print("Sua indecisão foi sua ruína!")
                 game_over = True
+                print("Você morreu!")
 
-    print("Você morreu!")
+    
 
 
 # Programa principal.
