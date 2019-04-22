@@ -72,7 +72,7 @@ def main():
                 
                 
 def primeiro_texto():
-    print("Como quer der chamado?")
+    print("Como quer ser chamado?")
     name = input()
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")

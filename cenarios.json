@@ -39,7 +39,21 @@
       "voltar": {
           "texto":"Voltar para o saguão de entrada",
           "cenario":"inicio"
+      },
+      "subsolo": {
+          "texto": "Procurar um lugar mais seguro",
+          "cenario":"subsolo"
       }
     }
-  }
-}
+  },
+  "subsolo": {
+     "título": "Os fantasmas do laboratório",
+     "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
+     "opções":{ 
+       "lutar":{
+           "texto": "Tentar libertar os fantasmas"},
+       "fugir": {
+           "texto":"Desistir de tudo"}
+   }
+     }
+     }
