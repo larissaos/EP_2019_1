@@ -1,4 +1,4 @@
-﻿# EP 19-1: Escape Insper
+﻿# EP 2019-1: Escape Insper
 #
 # Alunos: 
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
@@ -9,53 +9,14 @@ import json
 
 
 def carregar_cenarios():
-    cenarios = {
-        "inicio": { #cenário 1
-            "titulo": "Saguao do perigo",
-            "descricao": "Voce esta no saguao de entrada do insper, e o clima parece meio estranho.Mesmo assim, prefere continuar.",
-            "opcoes": { #escolha para onde ir:
-                "andar professor": "Tomar o elevador para o andar do professor", #1
-                "biblioteca": "Ir para a biblioteca"#2
-            }
-        },
-        "andar professor": {#caso escolha 1
-            "titulo": "Andar do desespero",
-            "descricao": "Voce chegou ao andar da sala do seu professor",
-            "opcoes": { #pode escolher voltar para o inicio ou seguir na escoolha 1
-                "inicio": "Tomar o elevador para o saguao de entrada",
-                "professor": "Falar com o professor"
-            }
-        },
-        "professor": {#caso permaneça na escolha 1
-            "titulo": "O monstro do Python",
-            "descricao": "Voce foi pedir para o professor adiar o EP. "
-                         "O professor revelou que é um monstro disfarçado "
-                         "e devorou sua alma.",#aqui voce morreu na escolha 1
-            "opcoes": {}#depois de morrer, ressurgi na biblioteca (podemos mudar isso)
-        },
-        "biblioteca": {#somente uma escolha, voltar para o inicio e então precisamos criar outros cenários aqui
-            "titulo": "Caverna da tranquilidade",
-            "descricao": "Voce esta na biblioteca",
-            "opcoes": {#aqui vc volta para o inicio
-                "andar do professor": "Voltar para onde o monstro está",
-                "subsolo": "Fugir para um lugar mais seguro"
-            }
-        },
-        "subsolo": {
-            "titulo": "Os fantasmas do laboratório",
-            "descricao":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
-            "opcoes":{ 
-                "lutar": "Tentar libertar os fantasmas",
-                "fugir": "Desistir de tudo"
-            }
-           }
-        },
+
     with open('cenarios.json', encoding='utf8') as script:
         cenarios = json.load(script)
->>>>>>> 7876d0ffabde86dc50b17809c86b0c5b7280b050
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
-cenarios, nome_cenario_atual = carregar_cenarios()
+
+
+
 
 
 def clear(): 
@@ -64,18 +25,13 @@ def clear():
         _ = system('cls') 
     else: 
         _ = system('clear') 
- 
+
 
 def main():
     clear()
-<<<<<<< HEAD
-    name = primeiro_texto()
-    cenarios, nome_cenario_atual = carregar_cenarios(name)#aqui deve aparecer as opções, e conforme as escolhas
-=======
     cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
     primeiro_texto()
     clear()
->>>>>>> 7876d0ffabde86dc50b17809c86b0c5b7280b050
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
@@ -92,13 +48,20 @@ def main():
         print(descricao)
         print()
         
-        opcoes = cenario_atual['opcoes']
+        
 
         if len(opcoes) == 0:
             print("Acabaram-se suas opções! Mwo mwo mwooooo...")
             game_over = True
             print("Você morreu!")
         else:
+            for opcao in cenario_atual["opções"]:
+                texto = cenario_atual["opções"][opcao]["texto"]
+                space = " "*(24-len(opcao))
+                print(opcao+":", end=space)
+                print(texto)
+                
+            print()
             escolha = input("Escolha para onde você quer ir:")
             if escolha in opcoes:
                 nome_cenario_atual = escolha
@@ -109,18 +72,15 @@ def main():
                 
                 
 def primeiro_texto():
-    print("Como quer ser chamado?")
-    name = input()
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
     print("Parecia uma boa idéia: vou só jogar um pouquinho/assistir Netflix/"
         "embaçar em geral. Amanhã eu começo o EP. Mas isso não deu certo...")
-    print()
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte {0}...)".formmat(name))
+        "adiamento do EP (boa sorte {0}...)".format(name))
     print()
     print("Pressione Enter para continuar...")
     input()
