@@ -4,23 +4,16 @@
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
-from os import system, name
 import json
-
+from os import system, name
 
 def carregar_cenarios():
-
     with open('cenarios.json', encoding='utf8') as script:
         cenarios = json.load(script)
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
-
-
-
-
-def clear(): 
-    #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
     if name == 'nt': 
         _ = system('cls') 
     else: 
