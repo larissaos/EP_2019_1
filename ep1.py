@@ -5,8 +5,11 @@
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 from os import system, name
+import json
+
 
 def carregar_cenarios():
+<<<<<<< HEAD
     cenarios = {
         "inicio": { #cenário 1
             "titulo": "Saguao do perigo",
@@ -49,6 +52,10 @@ def carregar_cenarios():
             }
            }
         },
+=======
+    with open('cenarios.json', encoding='utf8') as script:
+        cenarios = json.load(script)
+>>>>>>> 7876d0ffabde86dc50b17809c86b0c5b7280b050
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 cenarios, nome_cenario_atual = carregar_cenarios(name)
@@ -64,8 +71,14 @@ def clear():
 
 def main():
     clear()
+<<<<<<< HEAD
     name = primeiro_texto()
     cenarios, nome_cenario_atual = carregar_cenarios(name)#aqui deve aparecer as opções, e conforme as escolhas
+=======
+    cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
+    primeiro_texto()
+    clear()
+>>>>>>> 7876d0ffabde86dc50b17809c86b0c5b7280b050
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
@@ -74,7 +87,13 @@ def main():
         
         caracteres = "-"*len(nome_cenario_atual)
         
-        print ("você está em:\n{0}\n{1}\n{2}".format(nome_cenario_atual, caracteres, cenarios[nome_cenario_atual]["descricao"]))
+        opcoes = cenario_atual['opções']
+        descricao = cenario_atual['descrição']
+        
+        print (cenario_atual["título"])
+        print (caracteres)
+        print(descricao)
+        print()
         
         opcoes = cenario_atual['opcoes']
 
