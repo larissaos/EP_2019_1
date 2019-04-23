@@ -59,9 +59,9 @@
              "texto" : "Voltar para onde você estava",
              "cenario": "andar_professor"
         },
-         "biblioteca":{
-             "texto": "Relaxar um pouco lendo um bom livro",
-             "cenario": "biblioteca"
+         "subsolo":{
+             "texto": "Ir para o subsolo",
+             "cenario": "subsolo1"
           }
         }    
       },
