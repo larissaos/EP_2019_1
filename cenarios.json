@@ -1,6 +1,7 @@
 {
   "inicio": {
     "título": "Saguão do perigo",
+    "chance_inimigos":"60",
     "descrição": "Voce esta no saguão de entrada do Insper",
     "opções": {
       "andar_professor": {
@@ -15,6 +16,7 @@
   },
    "inicio_2":{
     "título":"Saguão do perigo",
+    "chance_inimigos":"60",
     "descrição":"Voce está no saguão de entrada do Insper",
     "opções":{
       "andar_professor":{
@@ -29,6 +31,7 @@
     },
   "andar_professor": {
     "título": "Andar do desespero",
+    "chance_inimigos":"30",
     "descrição": "Você chegou ao andar da sala do seu professor",
     "opções": {
       "inicio": {
@@ -41,6 +44,7 @@
       },
   "sala de aula": {
     "titulo": "O deserto",
+    "chance_inimigos":"0",
     "texto":"Ir para uma sala aleatória",
     "cenario":"sala de aula"
     }
@@ -48,6 +52,7 @@
   },
   "sala de aula": {
     "título": "O deserto",
+    "chance_inimigos":"0",
     "descrição":"Você entrou em uma sala e encontrou algumas carteiras vazias e desinteressantes",
     "opções": {
          "andar_professor": {
@@ -62,11 +67,13 @@
      },
   "professor": {
     "título": "O monstro do Python",
+    "chance_inimigos":"0",
     "descrição":"Você foi pedir para o professor adiar o EP.\nO professor revelou que é um monstro disfarçado\ne devorou sua alma.",
     "opções": ""
   },
   "biblioteca": {
     "título": "Caverna da tranquilidade",
+    "chance_inimigos":"0",
     "descrição": "Você esta na biblioteca",
     "opções": {
       "voltar": {
@@ -106,6 +113,7 @@
      },
   "quimica":{
       "título":"Laboratório de química",
+      "chance_inimigos":"0",
       "descrição":"Você esta no laboratório\nVocê achou uma poção!",
       "opções":{
         "voltar":{
@@ -115,6 +123,37 @@
        "esconder":{
             "texto":"Se esconder no armário",
             "cenario":"armario"
+            }
+        }
+    },
+    "andar_professor_2":{
+        "título":"Andar do desespero",
+        "chance_inimigos":"0",
+        "chance_inimigos":"0",
+        "descrição":"Você chegou ao andar da sala do seu professor",
+        "opções":{
+            "inicio":{
+                "texto":"Tomar o elevador para o saguão de entrada",
+                "cenario":"inicio"
+            },
+            "professor":{
+                "texto":"Falar com o professor",
+                "cenario":"professor"
+            }
+        }
+    },
+    "armario":{
+        "título":"Dentro do armário",
+        "chance_inimigos":"0",
+        "descrição":"Você descobriu uma entrada secreta para sala do professor pelo armário",
+        "opções":{
+            "professor":{
+                "texto":"Falar com o professor",
+                "cenario":"professor"
+            },
+            "voltar":{
+                "texto":"Voltar ao saguão de entrada",
+                "cenario":"inicio_2"
             }
         }
     }

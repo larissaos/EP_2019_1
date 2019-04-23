@@ -15,24 +15,14 @@ def carregar_cenarios():
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
-<<<<<<< HEAD
-
-=======
->>>>>>> d3e49b1366eef320a0be1a9b83c11bf3ad1f121a
 def carregar_inimigos():
     with open('inimigos.json', encoding='utf8') as script:
         inimigos = json.load(script)
     return inimigos
 
-<<<<<<< HEAD
 
 def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
 
-=======
-    #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
-
-def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
->>>>>>> d3e49b1366eef320a0be1a9b83c11bf3ad1f121a
     if name == 'nt': 
         _ = system('cls') 
     else: 
@@ -94,10 +84,20 @@ def primeiro_texto():
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte {0}...)".format(name))
+        "adiamento do EP (boa sorte...)")
     print()
-    print("Pressione Enter para continuar...")
-    input()
+    while(nome == "" or len(nome) < 3):
+        if(nome == ""):
+            clear()
+            print("Todo aventureiro precisa de um nome, escolha o seu!")
+            nome = input()
+                
+        elif(len(nome) < 3):
+            clear()
+            print("Esse nome é muito curto, aposto que você consegue colocar mais algumas letras nele!")
+            nome = input()
+    return nome
+
 
 
 # Programa principal.
