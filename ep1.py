@@ -14,8 +14,10 @@ def carregar_cenarios():
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
-
-
+def carregar_inimigos():
+    with open('inimigos.json', encoding='utf8') as script:
+        inimigos = json.load(script)
+    return inimigos
 
 
 def clear(): 
