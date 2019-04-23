@@ -4,16 +4,19 @@
 # - aluno A: Larissa Oliveira, larissaos@al.insper.edu.br
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
-from os import system, name
 import json
+<<<<<<< HEAD
+from os import system, name
+=======
+>>>>>>> 512aec1b80a868dae67eebdbf5fbe2141970df60
 
 def carregar_cenarios():
-
     with open('cenarios.json', encoding='utf8') as script:
         cenarios = json.load(script)
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
+<<<<<<< HEAD
 def carregar_inimigos():
     with open('inimigos.json', encoding='utf8') as script:
         inimigos = json.load(script)
@@ -22,6 +25,9 @@ def carregar_inimigos():
 
 def clear(): 
     #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+=======
+def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+>>>>>>> 68290ea8a87413c57f7db0ccfa5f9462cb17238d
     if name == 'nt': 
         _ = system('cls') 
     else: 
