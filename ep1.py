@@ -17,6 +17,14 @@ def carregar_cenarios():
     return cenarios, nome_cenario_atual
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+def carregar_inimigos():
+    with open('inimigos.json', encoding='utf8') as script:
+        inimigos = json.load(script)
+    return inimigos
+
+>>>>>>> 89b17a4fc21419be4ac89b846c439e156fefc039
 
 def clear(): 
     #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
