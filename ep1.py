@@ -111,18 +111,52 @@ def main():
                         print("Sua indecisão foi sua ruína!")
                         game_over = True
                         print("Você morreu!")
-        cenario_atual = cenarios[nome_cenario_atual] 
-        
-        
-        caracteres = "-"*len(nome_cenario_atual)
-        
-        opcoes = cenario_atual['opções']
-        descricao = cenario_atual['descrição']
-        
-        print (cenario_atual["título"])
-        print (caracteres)
-        print(descricao)
-        print()
+        while iniciar_batalha:
+            i_HP = int(inimigo_atual["HP"])
+            i_ATK = int(inimigo_atual["ATK"])
+            i_DEF = int(inimigo_atual["DEF"])
+            cenario_atual = cenarios[nome_cenario_atual] 
+            caracteres = "-"*len(nome_cenario_atual)
+            opcoes = cenario_atual['opções']
+            descricao = cenario_atual['descrição']
+            print (cenario_atual["título"])
+            print (caracteres)
+            print(descricao)
+            print()
+            print("Você encontrou um '", end="")
+            print(inimigo_atual["nome"]+"'")
+            print()
+            print(nome_avatar+": "+str(HP)+" pontos de vida, "+str(ATK)+" pontos de ataque, "+str(DEF)+" pontos de defesa.")
+            print(inimigo_atual["nome"]+": "+str(i_HP)+" pontos de vida, "+str(i_ATK)+" pontos de ataque, "+str(i_DEF)+" pontos de defesa.")
+            print()
+            escolha = input("Você quer 'lutar' ou 'fugir'? ")
+            if(escolha == "lutar"):
+                batalha = True
+                aventura = False
+                iniciar_batalha = False
+            elif(escolha == "fugir"):
+                if(cenario_atual['título'] == "O monstro do Python"):
+                    print()
+                    print("Você não pode fugir do Monstro Python HAHAHAHA")
+                    print()
+                    _ = input("Pressione enter para continuar...")
+                    batalha = True
+                    aventura = False
+                    iniciar_batalha = False
+                else:
+                    print()
+                    print()
+                    print("Você fugiu da batalha")
+                    _ = input("Pressione enter para continuar...")
+                    clear()
+                    aventura = True
+                    batalha = False
+                    iniciar_batalha = False
+            else:
+                print("Sua indecisão foi sua ruína!")
+                game_over = True
+                print("Você morreu!")
+                return
         
         
 
