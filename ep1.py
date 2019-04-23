@@ -250,7 +250,7 @@ def main():
         
 def primeiro_texto():
     print("Todo aventureiro precisa de um nome, escolha o seu!")
-    nome = input()
+    nome_avatar = input()
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
@@ -259,7 +259,7 @@ def primeiro_texto():
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte {0}...)".format(nome))
+        "adiamento do EP (boa sorte {0}...)".format(nome_avatar))
     print()
 
 
