@@ -111,6 +111,7 @@ def main():
                         print("Sua indecisão foi sua ruína!")
                         game_over = True
                         print("Você morreu!")
+                        
         cenario_atual = cenarios[nome_cenario_atual] 
         
         
