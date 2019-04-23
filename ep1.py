@@ -5,9 +5,8 @@
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 import json
-
-from os import system, name
 from random import randint
+from os import system, name
 
 
 def carregar_cenarios():
@@ -48,7 +47,7 @@ def main():
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
-         while aventura:
+        while aventura:
             calculo_de_chance = randint(0,100)
             
             
@@ -114,7 +113,7 @@ def main():
                         print("Você morreu!")
                         
 
-         while iniciar_batalha:
+        while iniciar_batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
             i_DEF = int(inimigo_atual["DEF"])
@@ -160,8 +159,8 @@ def main():
                 game_over = True
                 print("Você morreu!")
                 return
-           
-         while batalha:
+               
+        while batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
             i_DEF = int(inimigo_atual["DEF"])
@@ -249,6 +248,7 @@ def main():
                 #derrotou o monstro
         
 def primeiro_texto():
+    
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
     print()
@@ -257,22 +257,24 @@ def primeiro_texto():
     print()#aqui vc resolve implorar por misericódia
     print("É o dia de entregar o EP e você está muuuuito atrasado! Você está "
         "na entrada do Insper, e quer procurar o professor para pedir um "
-        "adiamento do EP (boa sorte...")
+        "adiamento do EP (boa sorte...)")
     print()
+<<<<<<< HEAD
     nome = input()
+=======
+    nome = input("Insira seu nome para continuar...")
+>>>>>>> f27882c4e9c859fdd24b3f70bc6a13847a85a62f
     while(nome == "" or len(nome) < 3):
         if(nome == ""):
             clear()
             print("Todo aventureiro precisa de um nome, escolha o seu!")
             nome = input()
+                
         elif(len(nome) < 3):
             clear()
             print("Esse nome é muito curto, aposto que você consegue colocar mais algumas letras nele!")
             nome = input()
     return nome
-
-
-
 
 
 
