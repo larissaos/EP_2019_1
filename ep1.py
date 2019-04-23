@@ -259,6 +259,7 @@ def primeiro_texto():
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...")
     print()
+    nome = input()
     while(nome == "" or len(nome) < 3):
         if(nome == ""):
             clear()
