@@ -5,7 +5,7 @@
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 import json
-
+from random import randint
 from os import system, name
 
 
@@ -47,7 +47,7 @@ def main():
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
-         while aventura:
+        while aventura:
             calculo_de_chance = randint(0,100)
             
             
@@ -159,8 +159,8 @@ def main():
                 game_over = True
                 print("Você morreu!")
                 return
-           
-            while batalha:
+               
+        while batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
             i_DEF = int(inimigo_atual["DEF"])
@@ -259,6 +259,7 @@ def primeiro_texto():
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     print()
+    nome = input("Insira seu nome para continuar...")
     while(nome == "" or len(nome) < 3):
         if(nome == ""):
             clear()

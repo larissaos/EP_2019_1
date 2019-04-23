@@ -1,131 +1,133 @@
 {
-  "inicio": {
-    "título": "Saguão do perigo",
-    "chance_inimigos":"60",
-    "descrição": "Voce esta no saguão de entrada do Insper",
-    "opções": {
-      "andar_professor": {
-          "texto":"Tomar o elevador para o andar do professor",
-          "cenario":"andar_professor"
-      },
-      "biblioteca": {
-            "texto":"Ir para a biblioteca",
-            "cenario":"biblioteca"
-      }
-    }
-  },
-   "inicio_2":{
-    "título":"Saguão do perigo",
-    "chance_inimigos":"60",
-    "descrição":"Voce está no saguão de entrada do Insper",
-    "opções":{
-      "andar_professor":{
-          "texto":"Tomar o elevador para o andar do professor",
-          "cenario":"andar_professor_2"
-      },
-      "biblioteca":{
-            "texto":"Ir para a biblioteca",
-            "cenario":"biblioteca"
+    "inicio":{
+        "título":"Saguão do perigo",
+        "chance_inimigos":"60",
+        "descrição":"Voce esta no saguão de entrada do Insper",
+        "opções":{
+            "andar_professor":{
+                "texto":"Tomar o elevador para o andar do professor",
+                "cenario":"andar_professor"
+            },
+            "biblioteca":{
+                "texto":"Ir para a biblioteca",
+                "cenario":"biblioteca"
+            }
         }
-      }
     },
-  "andar_professor": {
-    "título": "Andar do desespero",
-    "chance_inimigos":"30",
-    "descrição": "Você chegou ao andar da sala do seu professor",
-    "opções": {
-      "inicio": {
-          "texto":"Tomar o elevador para o saguão de entrada",
-          "cenario":"inicio"
-      },
-  "professor": {
-          "texto":"Falar com o professor",
-          "cenario":"professor"
-      },
-  "sala de aula": {
-    "titulo": "O deserto",
-    "chance_inimigos":"0",
-    "texto":"Ir para uma sala aleatória",
-    "cenario":"sala de aula"
+    "inicio_2":{
+        "título":"Saguão do perigo",
+        "chance_inimigos":"60",
+        "descrição":"Voce está no saguão de entrada do Insper",
+        "opções":{
+            "andar_professor":{
+                "texto":"Tomar o elevador para o andar do professor",
+                "cenario":"andar_professor_2"
+            },
+            "biblioteca":{
+                "texto":"Ir para a biblioteca",
+                "cenario":"biblioteca"
+            }
         }
-      }
-   },
-  "sala de aula": {
-    "título": "O deserto",
-    "chance_inimigos":"0",
-    "descrição":"Você entrou em uma sala e encontrou algumas carteiras vazias e desinteressantes",
-    "opções": {
-         "andar_professor": {
-             "texto" : "Voltar para onde você estava",
-             "cenario": "andar_professor"
-        },
-         "subsolo":{
-             "texto": "Ir para o subsolo",
-             "cenario": "subsolo1"
-          }
-        }    
-      },
-  "professor": {
-    "título": "O monstro do Python",
-    "chance_inimigos":"0",
-    "descrição":"Você foi pedir para o professor adiar o EP.\nO professor revelou que é um monstro disfarçado\ne devorou sua alma.",
-    "opções": ""
-  },
-  "biblioteca": {
-    "título": "Caverna da tranquilidade",
-    "chance_inimigos":"0",
-    "descrição": "Você esta na biblioteca",
-    "opções": {
-      "voltar": {
-          "texto":"Voltar para o saguão de entrada",
-          "cenario":"inicio"
-      },
-      "subsolo": {
-          "texto": "Procurar um lugar mais seguro",
-          "cenario":"subsolo"
-      }
-    }
-  },
-  "subsolo": {
-     "título": "Os fantasmas do laboratório",
-     "chance_inimigos":"0",
-     "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
-     "opções":{ 
-       "ajudar":{
-           "texto": "Tentar libertar os fantasmas"
-           "cenario":"subsolo2"},
-       "fugir": {
-           "texto":"Sair correndo"
-           "cenario":"biblioteca"
-         }
-       }
     },
- "subsolo2": {
-     "título": "Os fantasmas do laboratório",
-     "chance_inimigos":"0",
-     "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
-     "opções":{ 
-       "ajudar":{
-           "texto": "Tentar libertar os fantasmas...Eles não parecem achar a ideia muito legal"
-           "cenario":"subsolo1"},
-       "fugir": {
-           "texto":"Sair correndo"
-           "cenario":"biblioteca"
-     }
-   }
-     },
-  "quimica":{
-      "título":"Laboratório de química",
-      "chance_inimigos":"0",
-      "descrição":"Você esta no laboratório\nVocê achou uma poção!",
-      "opções":{
-        "voltar":{
-            "texto":"Voltar ao saguão de entrada",
-            "cenario":"inicio_2"
+    "andar_professor":{
+        "título":"Andar do desespero",
+        "chance_inimigos":"30",
+        "descrição":"Você chegou ao andar da sala do seu professor",
+        "opções":{
+            "inicio":{
+                "texto":"Tomar o elevador para o saguão de entrada",
+                "cenario":"inicio"
+            },
+            "professor":{
+                "texto":"Falar com o professor",
+                "cenario":"professor"
+            },
+            "sala de aula":{
+                "titulo":"O deserto",
+                "chance_inimigos":"0",
+                "texto":"Ir para uma sala aleatória",
+                "cenario":"sala de aula"
+            }
+        }
     },
-       "esconder":{
-            "texto":"Se esconder no armário",
-            "cenario":"armario"
+    "sala de aula":{
+        "título":"O deserto",
+        "chance_inimigos":"0",
+        "descrição":"Você entrou em uma sala e encontrou algumas carteiras vazias e desinteressantes",
+        "opções":{
+            "andar_professor":{
+                "texto":"Voltar para onde você estava",
+                "cenario":"andar_professor"
+            },
+            "subsolo":{
+                "texto":"Ir para o subsolo",
+                "cenario":"subsolo1"
+            }
+        }
+    },
+    "professor":{
+        "título":"O monstro do Python",
+        "chance_inimigos":"0",
+        "descrição":"Você foi pedir para o professor adiar o EP.\nO professor revelou que é um monstro disfarçado\ne devorou sua alma.",
+        "opções":""
+    },
+    "biblioteca":{
+        "título":"Caverna da tranquilidade",
+        "chance_inimigos":"0",
+        "descrição":"Você esta na biblioteca",
+        "opções":{
+            "voltar":{
+                "texto":"Voltar para o saguão de entrada",
+                "cenario":"inicio"
+            },
+            "subsolo":{
+                "texto":"Procurar um lugar mais seguro",
+                "cenario":"subsolo"
+            }
+        }
+    },
+    "subsolo":{
+        "título":"Os fantasmas do laboratório",
+        "chance_inimigos":"0",
+        "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
+        "opções":{
+            "ajudar":{
+                "texto":"Tentar libertar os fantasmas",
+                "cenario":"subsolo2"
+            },
+            "fugir":{
+                "texto":"Sair correndo",
+                "cenario":"biblioteca"
+            }
+        }
+    },
+    "subsolo2":{
+        "título":"Os fantasmas do laboratório",
+        "chance_inimigos":"0",
+        "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
+        "opções":{
+            "ajudar":{
+                "texto":"Tentar libertar os fantasmas...Eles não parecem achar a ideia muito legal",
+                "cenario":"subsolo"
+            },
+            "fugir":{
+                "texto":"Sair correndo",
+                "cenario":"biblioteca"
+            }
+        }
+    },
+    "quimica":{
+        "título":"Laboratório de química",
+        "chance_inimigos":"0",
+        "descrição":"Você esta no laboratório\nVocê achou uma poção!",
+        "opções":{
+            "voltar":{
+                "texto":"Voltar ao saguão de entrada",
+                "cenario":"inicio_2"
+            },
+            "esconder":{
+                "texto":"Se esconder no armário",
+                "cenario":"armario"
             }
         }
     },
