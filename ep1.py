@@ -5,7 +5,10 @@
 # - aluno B: Kathleen da Silva Nascimento, kathleensn@al.insper.edu.br
 # - aluno C: Giovanna Alves Papandrea Neves, giovannaapn@al.insper.edu.br
 import json
+<<<<<<< HEAD
 from os import system, name
+=======
+>>>>>>> 512aec1b80a868dae67eebdbf5fbe2141970df60
 
 def carregar_cenarios():
     with open('cenarios.json', encoding='utf8') as script:
@@ -65,7 +68,7 @@ def main():
                 
                 
 def primeiro_texto():
-    print("Como quer der chamado?")
+    print("Como quer ser chamado?")
     name = input()
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
     print("------------------")
