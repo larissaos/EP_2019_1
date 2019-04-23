@@ -259,11 +259,11 @@ def primeiro_texto():
         "na entrada do Insper, e quer procurar o professor para pedir um "
         "adiamento do EP (boa sorte...)")
     print()
-<<<<<<< HEAD
+
     nome = input()
-=======
+
     nome = input("Insira seu nome para continuar...")
->>>>>>> f27882c4e9c859fdd24b3f70bc6a13847a85a62f
+
     while(nome == "" or len(nome) < 3):
         if(nome == ""):
             clear()
