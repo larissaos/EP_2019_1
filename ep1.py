@@ -111,21 +111,8 @@ def main():
                         print("Sua indecisão foi sua ruína!")
                         game_over = True
                         print("Você morreu!")
-<<<<<<< HEAD
                         
-        cenario_atual = cenarios[nome_cenario_atual] 
-        
-        
-        caracteres = "-"*len(nome_cenario_atual)
-        
-        opcoes = cenario_atual['opções']
-        descricao = cenario_atual['descrição']
-        
-        print (cenario_atual["título"])
-        print (caracteres)
-        print(descricao)
-        print()
-=======
+
         while iniciar_batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
@@ -172,31 +159,7 @@ def main():
                 game_over = True
                 print("Você morreu!")
                 return
->>>>>>> d9830e2eaa3989ac84c50571985b7a3e94a3a622
         
-        
-
-        if len(opcoes) == 0:
-            print("Acabaram-se suas opções! Mwo mwo mwooooo...")
-            game_over = True
-            print("Você morreu!")
-        else:
-            for opcao in cenario_atual["opções"]:
-                texto = cenario_atual["opções"][opcao]["texto"]
-                space = " "*(24-len(opcao))
-                print(opcao+":", end=space)
-                print(texto)
-                
-            print()
-            escolha = input("Escolha para onde você quer ir:")
-            if escolha in opcoes:
-                nome_cenario_atual = escolha
-            else:
-                print("Sua indecisão foi sua ruína!")
-                game_over = True
-                print("Você morreu!")
-                
-                
 def primeiro_texto():
     
     print("Na hora do sufoco!")#aqui se iniciam suas más escolhas
