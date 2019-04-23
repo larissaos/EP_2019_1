@@ -16,9 +16,6 @@ def carregar_cenarios():
     return cenarios, nome_cenario_atual
 
 
-
-
-
 def clear(): 
     #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
     if name == 'nt': 
