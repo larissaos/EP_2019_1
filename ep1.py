@@ -15,15 +15,24 @@ def carregar_cenarios():
     nome_cenario_atual = "inicio"
     return cenarios, nome_cenario_atual
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3e49b1366eef320a0be1a9b83c11bf3ad1f121a
 def carregar_inimigos():
     with open('inimigos.json', encoding='utf8') as script:
         inimigos = json.load(script)
     return inimigos
 
+<<<<<<< HEAD
 
 def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
 
+=======
+    #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+
+def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou Linux
+>>>>>>> d3e49b1366eef320a0be1a9b83c11bf3ad1f121a
     if name == 'nt': 
         _ = system('cls') 
     else: 

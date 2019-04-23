@@ -83,13 +83,28 @@
      "título": "Os fantasmas do laboratório",
      "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
      "opções":{ 
-       "lutar":{
-           "texto": "Tentar libertar os fantasmas"},
+       "ajudar":{
+           "texto": "Tentar libertar os fantasmas"
+           "cenario":"subsolo2"},
        "fugir": {
-           "texto":"Desistir de tudo"}
+           "texto":"Sair correndo"
+           "cenario":"biblioteca"}
    }
      },
-    "quimica":{
+ "subsolo2": {
+     "título": "Os fantasmas do laboratório",
+     "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
+     "opções":{ 
+       "ajudar":{
+           "texto": "Tentar libertar os fantasmas...Eles não parecem achar a ideia muito legal"
+           "cenario":"subsolo1"},
+       "fugir": {
+           "texto":"Sair correndo"
+           "cenario":"biblioteca"
+     }
+   }
+     },
+  "quimica":{
       "título":"Laboratório de química",
       "descrição":"Você esta no laboratório\nVocê achou uma poção!",
       "opções":{
@@ -103,4 +118,4 @@
             }
         }
     }
-    }
+}
