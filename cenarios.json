@@ -13,6 +13,20 @@
       }
     }
   },
+   "inicio_2":{
+    "título":"Saguão do perigo",
+    "descrição":"Voce está no saguão de entrada do Insper",
+    "opções":{
+      "andar_professor":{
+          "texto":"Tomar o elevador para o andar do professor",
+          "cenario":"andar_professor_2"
+      },
+      "biblioteca":{
+            "texto":"Ir para a biblioteca",
+            "cenario":"biblioteca"
+        }
+      }
+    },
   "andar_professor": {
     "título": "Andar do desespero",
     "descrição": "Você chegou ao andar da sala do seu professor",
@@ -21,12 +35,31 @@
           "texto":"Tomar o elevador para o saguão de entrada",
           "cenario":"inicio"
       },
-      "professor": {
+  "professor": {
           "texto":"Falar com o professor",
           "cenario":"professor"
-      }
+      },
+  "sala de aula": {
+    "titulo": "O deserto",
+    "texto":"Ir para uma sala aleatória",
+    "cenario":"sala de aula"
     }
+  }
   },
+  "sala de aula": {
+    "título": "O deserto",
+    "descrição":"Você entrou em uma sala e encontrou algumas carteiras vazias e desinteressantes",
+    "opções": {
+         "andar_professor": {
+             "texto" : "Voltar para onde você estava",
+             "cenario": "andar_professor"
+        },
+         "biblioteca":{
+             "texto": "Relaxar um pouco lendo um bom livro",
+             "cenario": "biblioteca"
+      }
+     }
+     },
   "professor": {
     "título": "O monstro do Python",
     "descrição":"Você foi pedir para o professor adiar o EP.\nO professor revelou que é um monstro disfarçado\ne devorou sua alma.",
@@ -55,5 +88,19 @@
        "fugir": {
            "texto":"Desistir de tudo"}
    }
-     }
-     }
+     },
+    "quimica":{
+      "título":"Laboratório de química",
+      "descrição":"Você esta no laboratório\nVocê achou uma poção!",
+      "opções":{
+        "voltar":{
+            "texto":"Voltar ao saguão de entrada",
+            "cenario":"inicio_2"
+    },
+       "esconder":{
+            "texto":"Se esconder no armário",
+            "cenario":"armario"
+            }
+        }
+    }
+}

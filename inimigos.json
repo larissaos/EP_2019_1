@@ -1,0 +1,39 @@
+{
+    "inimigos":{
+        "0":{
+            "nome":"Professor selvagem",
+            "HP":"14",
+            "ATK":"3",
+            "DEF":"7",
+            "recompensa":" "
+        },
+        "1":{
+            "nome":"Veterano selvagem",
+            "HP":"12",
+            "ATK":"7",
+            "DEF":"0",
+            "recompensa":" "
+        },
+        "2":{
+            "nome":"Segurança selvagem",
+            "HP":"19",
+            "ATK":"5",
+            "DEF":"2",
+            "recompensa":"+10A"
+        },
+        "3":{
+            "nome":"Novato selvagem",
+            "HP":"18",
+            "ATK":"40",
+            "DEF":"12",
+            "recompensa":"+22D"
+        },
+        "chefe":{
+            "nome":"Monstro Python",
+            "HP":"40",
+            "ATK":"38",
+            "DEF":"10",
+            "recompensa":"%Você derrotou o monstro final, e conseguiu nota no EP. Parabéns!"
+        }
+    }
+}
