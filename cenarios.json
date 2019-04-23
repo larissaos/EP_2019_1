@@ -88,6 +88,7 @@
   },
   "subsolo": {
      "título": "Os fantasmas do laboratório",
+     "chance_inimigos":"0",
      "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
      "opções":{ 
        "ajudar":{
@@ -100,6 +101,7 @@
      },
  "subsolo2": {
      "título": "Os fantasmas do laboratório",
+     "chance_inimigos":"0",
      "descrição":"Você chegou ao subsolo.\nqUEm EsTá Aí?\nVocê avista três alunos fantasmas no laboratório!",
      "opções":{ 
        "ajudar":{
