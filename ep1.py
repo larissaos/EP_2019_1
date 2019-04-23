@@ -47,6 +47,70 @@ def main():
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
+         while aventura:
+            calculo_de_chance = randint(0,100)
+            
+            
+            cenario_atual = cenarios[nome_cenario_atual] 
+            
+            tamanho_inimigos = len(inimigos["inimigos"])
+            
+            if(cenario_atual["título"] == "O monstro do Python"):
+                inimigo_id = "chefe"
+            else:
+                inimigo_id = str(randint(0, tamanho_inimigos-2))
+            
+            inimigo_atual = inimigos["inimigos"][inimigo_id]
+            
+            caracteres = "-"*len(cenarios[nome_cenario_atual]["título"])
+            chance_de_batalha = int(cenarios[nome_cenario_atual]["chance_inimigos"])
+            
+            if(chance_de_batalha > calculo_de_chance):
+                batalha = False
+                iniciar_batalha = True
+                aventura = False
+            
+            if(aventura == True):
+                opcoes = cenario_atual['opções']
+                descricao = cenario_atual['descrição']
+                
+                if(cenario_atual["título"] == "Laboratório de química"):
+                    inventario.append("Poção")
+                        
+                print (cenario_atual["título"])
+                print (caracteres)
+                print(descricao)
+                print()
+                
+                
+                #if opcoes == andar professor:
+                #    escolha_andar_prof = input("Escolha o que você vai fazer: inicio ou professor"):
+                #        if escolha_andar_prof == "Tomar elevador para saguao"
+                        
+                if len(opcoes) == 0:
+                    print("Acabaram-se suas opções!")
+                    _ = input("Pressione Enter para continuar...")
+                    clear()
+                    batalha = False
+                    iniciar_batalha = True
+                    aventura = False
+                else:
+                    for opcao in cenario_atual["opções"]:
+                        texto = cenario_atual["opções"][opcao]["texto"]
+                        space = " "*(24-len(opcao))
+                        print(opcao+":", end=space)
+                        print(texto)
+                    
+                    print()
+                    escolha = input("Escolha para onde você quer ir: ")
+                    if escolha in opcoes:
+                        clear()
+                        escolha = opcoes[escolha]["cenario"]
+                        nome_cenario_atual = escolha
+                    else:
+                        print("Sua indecisão foi sua ruína!")
+                        game_over = True
+                        print("Você morreu!")
         cenario_atual = cenarios[nome_cenario_atual] 
         
         
