@@ -108,7 +108,11 @@
         "opções":{
             "ajudar":{
                 "texto":"Tentar libertar os fantasmas...Eles não parecem achar a ideia muito legal",
+<<<<<<< HEAD
                 "cenario":"subsolo"
+=======
+                "cenario":"subsolo1"
+>>>>>>> 471aa8949df0f36419ababceff9071a1e4cf7d9a
             },
             "fugir":{
                 "texto":"Sair correndo",
