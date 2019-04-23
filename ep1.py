@@ -30,10 +30,20 @@ def clear(): #comando para limpar a tela, se for windows, se não, se for MAC ou
 
 
 def main():
+    escolha = ""
+    inventario = [] #lista pro inventario
     clear()
     cenarios, nome_cenario_atual = carregar_cenarios()#aqui deve aparecer as opções, e conforme as ecolhas
-    primeiro_texto()
+    inimigos = carregar_inimigos()
+    nome_avatar = primeiro_texto()
+    HP = 19 
+    ATK = 10 
+    DEF = 3 
     clear()
+    game_over = False #se você n morreu
+    iniciar_batalha = False 
+    batalha = False 
+    aventura = True 
 
     game_over = False #se você n morreu
     while not game_over:# vc ta em algm lugar
