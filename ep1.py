@@ -159,6 +159,93 @@ def main():
                 game_over = True
                 print("Você morreu!")
                 return
+           
+            while batalha:
+            i_HP = int(inimigo_atual["HP"])
+            i_ATK = int(inimigo_atual["ATK"])
+            i_DEF = int(inimigo_atual["DEF"])
+            
+            recompensa = inimigo_atual["recompensa"]
+            
+            cenario_atual = cenarios[nome_cenario_atual] 
+            
+            caracteres = "-"*len(cenarios[nome_cenario_atual]["título"])
+            
+            opcoes = cenario_atual['opções']
+            descricao = cenario_atual['descrição']
+            print()
+            print()
+            while i_HP > 0 and game_over == False:
+                dano = ATK-i_DEF
+                i_HP = i_HP - dano
+                print("Você atacou o inimigo, causando "+str(dano)+" de dano")
+                if(i_HP <= 0):
+                    print("Você derrotou o inimigo, e agora está com "+str(HP)+" de vida")
+                    input("Pressione Enter para continuar...")
+                else:
+                    dano = i_ATK-DEF
+                    HP = HP - dano
+                    print("Você foi atacado, recebeu "+str(dano)+" de dano")
+                    if(HP <= 0):
+                        morrer = True
+                        if(len(inventario) != 0):
+                            for item in inventario:
+                                if(item == "Poção"):
+                                    print()
+                                    print("Você consumiu sua poção")
+                                    print()
+                                    HP += 10
+                                    inventario.remove("Poção")
+                                    if(HP > 0):
+                                        morrer = False
+                                    else:
+                                        morrer = True
+                                else:
+                                    morrer = True
+                        else:
+                            morrer = True
+                            
+                        if(morrer == True):
+                            aventura = False
+                            batalha = False
+                            iniciar_batalha = False
+                            game_over = True
+                            print()
+                            print("Você morreu em batalha")
+                    
+            if(i_HP <= 0):
+                if(recompensa[0] == "+"):
+                    ultima_letra = recompensa[len(recompensa)-1]
+                    
+                    if(ultima_letra == "A"):
+                        ATK += int(recompensa[1:len(recompensa)-1])
+                        recompensa = recompensa[0:len(recompensa)-1]+" ATK"
+                    
+                    elif(ultima_letra == "D"):
+                        DEF += int(recompensa[1:len(recompensa)-1])
+                        recompensa = recompensa[0:len(recompensa)-1]+" DEF"
+                    
+                    elif(ultima_letra == "H"):
+                        HP += int(recompensa[1:len(recompensa)-1])
+                        recompensa = recompensa[0:len(recompensa)-1]+" HP"
+                elif(recompensa[0] == "%"):
+                    recompensa = recompensa[1:len(recompensa)]
+                    print()
+                    print(recompensa)
+                    game_over = True
+                    return
+                
+                print()
+                print()
+                if(recompensa != ""):
+                    print("Você acaba de ganhar: "+recompensa)
+                input("Pressione Enter para continuar...")
+                
+                aventura = True
+                batalha = False
+                iniciar_batalha = False
+                clear()
+                #derrotou o monstro
         
 def primeiro_texto():
     
