@@ -7,6 +7,7 @@
 import json
 
 from os import system, name
+from random import randint
 
 
 def carregar_cenarios():
@@ -113,7 +114,7 @@ def main():
                         print("Você morreu!")
                         
 
-        while iniciar_batalha:
+         while iniciar_batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
             i_DEF = int(inimigo_atual["DEF"])
@@ -160,7 +161,7 @@ def main():
                 print("Você morreu!")
                 return
            
-            while batalha:
+         while batalha:
             i_HP = int(inimigo_atual["HP"])
             i_ATK = int(inimigo_atual["ATK"])
             i_DEF = int(inimigo_atual["DEF"])

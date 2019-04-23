@@ -41,12 +41,10 @@
   "professor": {
           "texto":"Falar com o professor",
           "cenario":"professor"
-      },
+          }
   "sala de aula": {
-    "titulo": "O deserto",
-    "chance_inimigos":"0",
-    "texto":"Ir para uma sala aleatória",
-    "cenario":"sala de aula"
+          "texto":"Ir para uma sala aleatória",
+          "cenario":"sala de aula"
         }
       }
    },
